@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    Light *livingRoomLight = new light("Living Room");
-    Light *kitchenLight = new light("Kitchen");
+    Light *livingRoomLight = new Light("Living Room");
+    Light *kitchenLight = new Light("Kitchen");
     CeilingFan *ceilingFan= new CeilingFan("Living Room");
     GarageDoor *garageDoor = new GarageDoor("Garage");
     Stereo *stereo = new Stereo("Living Room");
@@ -33,9 +33,8 @@ int main(int argc, char *argv[])
     
     
     SimpleRemoteControl *remote = new SimpleRemoteControl();
-    Light *light = new Light();
-    LightOnCommand *lightOn = new LightOnCommand(light);
-    LightOffCommand *lightOff = new LightOffCommand(light);
+    LightOnCommand *lightOn = new LightOnCommand(livingRoomLight);
+    LightOffCommand *lightOff = new LightOffCommand(kitchenLight);
 
     GarageDoorOpenCommand *garageOpen = new GarageDoorOpenCommand(garageDoor);
     GarageDoorCloseCommand *garageClose = new GarageDoorCloseCommand(garageDoor);

@@ -1,8 +1,8 @@
 #include "garagedoor.h"
 
-GarageDoor::GarageDoor()
-{
-
+GarageDoor::GarageDoor(QString location) {
+    
+    this->location = location;
 }
 
 void GarageDoor::up() {

@@ -1,8 +1,8 @@
 #include "light.h"
 
-Light::Light()
+Light::Light(QString location)
 {
-
+    this->location = location;
 }
 
 void Light::on() {
